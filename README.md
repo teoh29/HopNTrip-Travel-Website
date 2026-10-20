@@ -1,136 +1,99 @@
-# HopNTrip — Sabah Tourism Agency Website
+## Getting Started
 
-HopNTrip is a static, multi-page website for a fictional/practice travel agency specialising in Sabah, Malaysia tourism. It showcases a full customer-facing booking experience — flights, hotels, tours, and travel insurance — alongside company info, a portfolio, and account login/registration, all built with plain HTML, CSS, and JavaScript (no frameworks, no backend).
+### Option 1: Open directly
 
-## 📄 Pages
+1. Download and extract the project ZIP.
+2. Open the extracted folder containing `index.html`.
+3. Double-click `index.html` to open it in your browser.
 
-| File | Description |
-|---|---|
-| `index.html` | Homepage — hero banner, highlights, and entry points into the rest of the site |
-| `about-us.html` | Company story, mission, team profiles, and certifications |
-| `services.html` | Overview of services offered by HopNTrip |
-| `tours.html` | Browsable tour packages around Sabah |
-| `flighbooking.html` | Flight search & booking UI (from/to, dates, travelers, class, airline/price/duration filters) |
-| `hotels.html` | Hotel search & booking UI (destination, check-in/out dates, guests, price/rating/amenity filters) |
-| `insurance.html` | Travel insurance plan selector and application form (traveler details, passport, trip dates, plan choice) |
-| `contact-us.html` | Contact form (name, email, subject, travel interest, message) plus embedded Google Map and location details |
-| `login.html` | Combined login / registration UI with tab switching, show/forgot password flows |
-| `portfolio.html` | Showcase of past trips/projects or client work |
+This is the quickest way to preview the pages.
 
-All pages share a common navigation bar, footer, and design language, and link to one another via relative `.html` paths (e.g. `href="about-us.html"`).
+### Option 2: Run a local server
 
-## ✨ Key Features
+If Python 3 is installed, open a terminal in the folder containing `index.html` and run:
 
-- **Responsive navigation** — collapsible/sidebar menu with language dropdown, shared identically across all pages
-- **Flight & hotel search forms** — interactive filters (checkboxes for airline, price range, duration, star rating, amenities)
-- **Insurance application form** — full traveler intake form with required-field validation (`required` attributes) and a plan field that's populated from the selected plan
-- **Contact form** — validated inputs with an embedded Google Maps location and a WhatsApp click-to-chat link
-- **Login / Register** — client-side JS handlers (`handleLogin`, `handleRegister`, `handleForgotPassword`) with password visibility toggle and a forgot-password modal
-- **Floating chat widget** — a "Type your message..." live-chat style box present on most inner pages
-- **Social & partner links** — Facebook, Instagram, TikTok, YouTube, TripAdvisor icons, plus MSTA / IATA / UNESCO / Eco certification badges
-- **Smooth scrolling & scroll-to-top** — UX polish via CSS `scroll-behavior` and JS scroll listeners
-
-## 🛠️ Tech Stack
-
-- **HTML5** — semantic markup, one self-contained file per page
-- **CSS3** — embedded `<style>` blocks per page (CSS custom properties for theming, e.g. `--primary`, `--accent`)
-- **Vanilla JavaScript** — embedded `<script>` blocks handling menus, modals, forms, and the chat widget (no external JS frameworks)
-- **Font Awesome 6.5.0** — icon library, loaded via CDN (`cdnjs.cloudflare.com`)
-- **Pexels** — stock photography, loaded via hotlinked URLs
-- **Google Maps Embed** — used on the Contact Us page
-
-> ⚠️ Note: All styling and scripting is currently **inline per-page** rather than in shared external files. This means each HTML file is self-contained and easy to open individually, but shared elements (nav, footer, colors) are duplicated across files rather than centralised.
-
-## 📁 Expected Folder Structure
-
-The pages reference local assets under an `image/` directory that isn't included in this upload. To run the site as intended, create the following structure:
-
-```
-project-root/
-├── index.html
-├── about-us.html
-├── contact-us.html
-├── flighbooking.html
-├── hotels.html
-├── insurance.html
-├── login.html
-├── portfolio.html
-├── services.html
-├── tours.html
-└── image/
-    ├── HopNTrip-logo.png, logo1.png
-    ├── hero-banner-about.png
-    ├── nav/icon images: a.png, alerts.png, apple.png, close eye.png, email.png, eye.png,
-    │   flight.png, google.png, hotels.png, insurance.png, map.png, password.png,
-    │   sabah.png, services.png, tag.png, tours.png, user.png
-    ├── page hero/background images: flight_bg.jpg, hotel_bg.jpg, insurance_bg.png,
-    │   mountain3.jpg, sabah_bg.jpg, tour_bg.jpg
-    ├── hotel photos: hotel1.jpg, hotel2.jpg, hotel3.jpg
-    ├── tour/package photos: package1.jpg–package4.jpg, tour1.jpg, tour2.png, tour3.jpg,
-    │   tour4.jpg, tour5.jpg, tour6.jpg
-    ├── destination photos: danum-valley.jpg, island.jpg, khighlands.jpg, kota-kinabalu.jpg,
-    │   kundasang.jpg, mabul.jpg, mkinabalu.jpg, mountkinabalu.jpg, rainforest.jpg,
-    │   rainforest1.jpg, rsafari.jpg, sabah3.jpg, sandakan.jpg, sipadan-island.jpg,
-    │   sislands.jpg, sunset-cruise.jpg, tunku-abdul-rahman-marine-park.jpg, village.jpg
-    ├── traveler/lifestyle photos: adventure-seekers.jpg, family-trip.jpg,
-    │   happy-traveller.png–happy-traveller6.png, orang-utan.jpg, romantic-getaways.jpg,
-    │   solo-travelers.jpg
-    ├── category icons: adventure1.png, adventure2.png, culture1.png, culture2.png,
-    │   nature1.png, nature2.png, nature3.png, wildlife1.png, wildlife2.png
-    ├── team photos: tiff.jpg, enyi.jpg, weiting.jpg, wenxi.jpg, yixuan.jpg
-    ├── certification badges: eco-tourism-award.png, iata.png, msta.png,
-    │   tripadvisor-badge.png, unesco-logo.png
-    └── social icons: facebook.png, facebook-icon.png, instagram-icon.png,
-        tiktok-icon.png, whatsapp-icon.png, youtube-icon.png
-└── video/
-    ├── plane.mp4, Sabah.mp4, SabahView.mp4, SabahView2.mp4, sabah-showcase.mp4 (index.html backgrounds)
-    ├── fish.mp4 (contact-us.html)
-    ├── travel.mp4 (services.html featured video)
-    └── water1.mp4 – water6.mp4 (services.html video gallery)
+```bash
+python -m http.server 8000
 ```
 
-This list was extracted directly from every `src=`/`href=`/`url()` reference across all 10 HTML files, so it should match exactly what's needed — no filler filenames. Without these `image/` and `video/` folders populated, pages will load and function but media will appear broken.
+On Windows, you can also use:
 
-## 🚀 Getting Started
+```powershell
+py -m http.server 8000
+```
 
-Since this is a static site with no build step or backend:
+Open **[http://localhost:8000](http://localhost:8000)** in your browser. Press **Ctrl+C** in the terminal to stop the server.
 
-1. Download/clone all `.html` files into a single folder.
-2. Add an `image/` folder alongside them containing the required assets (see structure above).
-3. Open `index.html` directly in a browser, **or** serve the folder locally for the best experience (recommended, since some browsers restrict local file behavior):
-   ```bash
-   # Using Python
-   python -m http.server 8000
+An internet connection is needed for the embedded map, CDN icons, and externally hosted images. Local images and videos are included in the project.
 
-   # Then visit
-   http://localhost:8000/index.html
-   ```
-4. Navigate the site using the top navigation bar — all internal links are relative, so no server-side routing is required.
+## Exploring the Demo
 
-## ⚠️ Known Limitations
+1. Start on the homepage and explore the destination cards.
+2. Use the navigation menu to visit services, tours, flights, and hotels.
+3. Try the booking controls to see their demonstration messages.
+4. Select an insurance plan and explore the application form.
+5. Try the login, registration, and contact forms to see validation feedback.
+6. Open the chat widget to see its predefined response.
 
-- **No backend / persistence** — login, registration, booking, and contact forms are front-end only; submissions are not sent anywhere or stored (no database, no API calls).
-- **Hardcoded sample data** — flight/hotel search fields have pre-filled placeholder values (e.g. dates from 2023) rather than live data.
-- **Duplicated CSS/JS** — shared components (nav, footer, chat widget) are copy-pasted into every page rather than extracted into shared files.
-- **External image hotlinking** — some images are pulled live from Pexels URLs, which requires an internet connection and depends on those URLs staying valid.
-- **No accessibility/SEO audit performed** — while some `aria-label`s exist (e.g. on the login form), a full accessibility pass hasn't been done.
+Use sample information when trying forms. Success messages demonstrate the interface; they do not create accounts, send emails, or confirm reservations.
 
-## 🔮 Possible Next Steps
+## Development Notes
 
-- Extract shared nav/footer/chat-widget markup into includes or a JS templating approach to reduce duplication
-- Move inline `<style>`/`<script>` blocks into shared external `styles.css` / `script.js` files
-- Wire up forms to a real backend (e.g. Node/Express + database) for actual bookings, accounts, and contact submissions
-- Replace hardcoded sample dates/values with dynamic data
-- Store local images instead of relying on hotlinked stock photos
+- Edit the relevant `.html` file to change its content, styles, or interactions.
+- Shared navigation, footers, and chat code are repeated across pages. Apply shared changes consistently.
+- Preserve the `image/` and `video/` paths when moving or uploading the project.
+- Match filename capitalization exactly when referencing assets, especially when deploying to a case-sensitive host.
+- Keep `index.html` at the repository root when uploading the extracted project contents.
 
-## 👥 Team
+### Suggested Manual Checks
 
-This is a group project. Team members:
+- Open all ten pages and follow the navigation links.
+- Check images and videos for missing assets.
+- Try the menu at desktop and mobile widths.
+- Open and close modals and the chat widget.
+- Submit empty, invalid, and valid sample form values.
+- Check the browser console for JavaScript errors.
 
-| Name | Student ID |
-|---|---|
-| Tiffany Fam (Leader) | 23052301 |
-| Tan Wei Ting | 23094709 |
-| Teoh En Yi | 2305110 |
-| Tan Wen Xi | 23093495 |
-| Sian Yi Xuan | 23099609 |
+These are suggested checks for future changes, not a claim that the project has passed a full browser or accessibility audit.
+
+## Current Limitations
+
+| Area | Current behaviour |
+| --- | --- |
+| Search and filters | Several controls display demo alerts instead of querying or filtering live inventory |
+| Bookings and insurance | Actions show sample feedback; no reservation or policy is created |
+| Accounts | Validation and success messages are simulated; no authentication or account storage |
+| Password reset | Displays simulated feedback; no reset email is sent |
+| Contact form | Validates inputs and displays success feedback; no message delivery |
+| Chat | Adds messages locally and returns a predefined reply |
+| Travel information | Prices, offers, dates, and listings are sample content |
+| External resources | Maps, CDN icons, and some images depend on external services |
+| Maintainability | Repeated inline styles and scripts require updates across multiple files |
+
+## Future Improvements
+
+- [ ] Extract shared styles and scripts into reusable files.
+- [ ] Consolidate common navigation, footer, and chat components.
+- [ ] Implement working search, sorting, filtering, and pagination.
+- [ ] Connect enquiry and booking forms to a backend.
+- [ ] Add secure authentication and persistent account storage.
+- [ ] Replace sample travel data with an appropriate data source.
+- [ ] Optimize images and videos for faster loading.
+- [ ] Audit keyboard navigation, form labels, contrast, and mobile layouts.
+- [ ] Add automated checks for links and core interactions.
+
+## Team
+
+| Member | Role |
+| --- | --- |
+| Tiffany Fam | Team Leader |
+| Tan Wei Ting | Team Member |
+| Teoh En Yi | Team Member |
+| Tan Wen Xi | Team Member |
+| Sian Yi Xuan | Team Member |
+
+## Assets and Licensing
+
+The project includes local images and videos and references third-party resources, including Pexels imagery, Font Awesome icons, and Google Maps.
+
+No project license file is included in the supplied archive. Reuse permissions for the source code and media are not established by this README. Third-party assets remain subject to their respective terms.
