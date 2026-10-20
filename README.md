@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="image/HopNTrip-logo.png" alt="HopNTrip logo" width="180">
+</p>
+
+<h1 align="center">HopNTrip</h1>
+
+<p align="center">
+  <strong>Your Journey Begins Here</strong><br>
+  A Sabah tourism website built with HTML, CSS, and JavaScript.
+</p>
+
+---
+
 ## Overview
 
 HopNTrip is a group web development project for a fictional travel agency focused on Sabah, Malaysia. It brings destination discovery, tour packages, accommodation, flights, and travel insurance together in a multi-page interface.
