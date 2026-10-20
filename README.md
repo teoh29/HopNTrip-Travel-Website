@@ -1,3 +1,67 @@
+<p align="center">
+  <img src="image/HopNTrip-logo.png" alt="HopNTrip logo" width="180">
+</p>
+
+<h1 align="center">HopNTrip</h1>
+
+<p align="center">
+  <strong>Your Journey Begins Here</strong><br>
+  A Sabah tourism website built with HTML, CSS, and JavaScript.
+</p>
+
+---
+
+## Overview
+
+HopNTrip is a group web development project for a fictional travel agency focused on Sabah, Malaysia. It brings destination discovery, tour packages, accommodation, flights, and travel insurance together in a multi-page interface.
+
+The project demonstrates website design and browser-based interactions using plain HTML, CSS, and JavaScript, with no framework or build process.
+
+> **Project status:** Front-end demonstration. Bookings, account access, contact submissions, and chat responses are simulated. There is no backend, database, payment processing, or live travel inventory.
+
+## Contents
+
+- [Features](#features)
+- [Technology](#technology)
+- [Pages](#pages)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Exploring the Demo](#exploring-the-demo)
+- [Development Notes](#development-notes)
+- [Current Limitations](#current-limitations)
+- [Future Improvements](#future-improvements)
+- [Team](#team)
+- [Assets and Licensing](#assets-and-licensing)
+
+## Features
+
+- **Destination discovery:** Sabah travel highlights, destination cards, and detail modals.
+- **Travel services:** Dedicated pages for flights, hotels, tours, and travel insurance.
+- **Booking interfaces:** Search fields, filter controls, and demonstration booking actions.
+- **Account forms:** Login, registration, password visibility controls, and a password-reset modal with client-side validation.
+- **Contact page:** Validated enquiry form, embedded Google Map, and location information.
+- **Company showcase:** About page, team profiles, and travel portfolio.
+- **Media:** Local destination photography, video backgrounds, and video galleries.
+- **Navigation and interaction:** Mobile menu controls, scroll-to-top buttons, modal windows, and a simulated chat widget.
+
+## Technology
+
+| Technology | Purpose |
+| --- | --- |
+| HTML5 | Page structure, links, forms, and media |
+| CSS3 | Layout, styling, and responsive rules |
+| Vanilla JavaScript | Menus, modals, validation, and demo interactions |
+| Font Awesome 6.5.0 | Icons on the contact and login pages, loaded from a CDN |
+| Google Maps Embed | Map on the contact page |
+
+CSS and JavaScript are embedded in the individual HTML files. No package installation, API keys, or environment variables are required to preview the project.
+
+## Pages
+
+| Page | File | Description |
+| --- | --- | --- |
+| Home | [`index.html`](index.html) | Travel highlights, promotions, and destination discovery |
+| About Us | [`about-us.html`](about-us.html) | Agency introduction and team profiles |
 ## Getting Started
 
 ### Option 1: Open directly
@@ -70,18 +134,6 @@ These are suggested checks for future changes, not a claim that the project has 
 | External resources | Maps, CDN icons, and some images depend on external services |
 | Maintainability | Repeated inline styles and scripts require updates across multiple files |
 
-## Future Improvements
-
-- [ ] Extract shared styles and scripts into reusable files.
-- [ ] Consolidate common navigation, footer, and chat components.
-- [ ] Implement working search, sorting, filtering, and pagination.
-- [ ] Connect enquiry and booking forms to a backend.
-- [ ] Add secure authentication and persistent account storage.
-- [ ] Replace sample travel data with an appropriate data source.
-- [ ] Optimize images and videos for faster loading.
-- [ ] Audit keyboard navigation, form labels, contrast, and mobile layouts.
-- [ ] Add automated checks for links and core interactions.
-
 ## Team
 
 | Member | Role |
@@ -91,9 +143,3 @@ These are suggested checks for future changes, not a claim that the project has 
 | Teoh En Yi | Team Member |
 | Tan Wen Xi | Team Member |
 | Sian Yi Xuan | Team Member |
-
-## Assets and Licensing
-
-The project includes local images and videos and references third-party resources, including Pexels imagery, Font Awesome icons, and Google Maps.
-
-No project license file is included in the supplied archive. Reuse permissions for the source code and media are not established by this README. Third-party assets remain subject to their respective terms.
